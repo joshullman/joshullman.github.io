@@ -24,7 +24,7 @@ body {
 }
 
 a:link {
-  color: black;
+  color: #D8D8D8;
   text-decoration: none;
 }
 
@@ -35,7 +35,7 @@ a:hover {
 
 a:visited {
   text-decoration: none;
-  color: black;
+  color: #D8D8D8;
 }
 
 .post {
@@ -58,7 +58,6 @@ a:visited {
 }
 
 #tleft {
-	color: #D8D8D8;
 	position: absolute;
 	text-align: center;
 	display: inline-block;
@@ -71,7 +70,6 @@ a:visited {
 }
 
 #tright {
-	color: #D8D8D8;
 	position: absolute;
 	text-align: center;
 	display: inline-block;
@@ -85,7 +83,6 @@ a:visited {
 }
 
 #bleft {
-	color: #D8D8D8;
 	position: absolute;
 	text-align: center;
 	display: inline-block;
@@ -98,7 +95,6 @@ a:visited {
 }
 
 #bright {
-	color: #D8D8D8;
 	position: absolute;
 	text-align: center;
 	display: inline-block;
@@ -132,8 +128,3 @@ h4 {
 	margin-left: auto;
 	margin-right: auto;
 }
-
-h3 {
-	color: #D8D8D8;
-}
-
