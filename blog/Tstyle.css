@@ -5,6 +5,10 @@ body {
 	background-color: gray;
 }
 
+* {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
 #all {
 	display: block;
 	width: 88%;
