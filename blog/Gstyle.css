@@ -1,0 +1,135 @@
+body {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	height: 100%;
+	background-color: gray;
+}
+
+#all {
+	display: block;
+	width: 88%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background-color: white;
+	border-style: solid;
+	border-width: 3px;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.post {
+	display: block;
+	width: 66%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#title {
+	width: 88%;
+	position: relative;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 7%;
+	border: 0px;
+}
+
+#tleft {
+	position: absolute;
+	text-align: center;
+	display: inline-block;
+	width: 44%;
+	height: 5%;
+	top: 0px;
+	background-color: yellow;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-style: solid;
+	border-width: 3px;
+}
+
+#tright {
+	position: absolute;
+	text-align: center;
+	display: inline-block;
+	width: 44%;
+	height: 5%;
+	top: 0px;
+	left: 48.5%;
+	background-color: red;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-style: solid;
+	border-width: 3px;
+}
+
+#bleft {
+	position: absolute;
+	text-align: center;
+	display: inline-block;
+	width: 44%;
+	height: 5%;
+	bottom: 0px;
+	background-color: yellow;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-style: solid;
+	border-width: 3px;
+}
+
+#bright {
+	position: absolute;
+	text-align: center;
+	display: inline-block;
+	width: 44%;
+	height: 5%;
+	left: 48.5%;
+	bottom: 0px;
+	background-color: red;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-style: solid;
+	border-width: 3px;
+}
+
+
+p {
+	display: block;
+	width: 66%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h2 {
+	text-align: center;
+	font-weight: bold;
+	margin-left: auto;
+	margin-right: auto;
+	text-decoration: underline;
+}
+
+h4 {
+	text-align: center;
+	font-weight: bold;
+	margin-left: auto;
+	margin-right: auto;
+}
+
