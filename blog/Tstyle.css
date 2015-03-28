@@ -7,6 +7,7 @@ body {
 
 * {
 	font-family: 'Roboto Condensed', sans-serif;
+	font-color: white;
 }
 
 #all {
@@ -66,8 +67,6 @@ a:visited {
 	background-color: #00007F;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	border-style: solid;
-	border-width: 3px;
 }
 
 #tright {
@@ -77,12 +76,10 @@ a:visited {
 	width: 44%;
 	height: 5%;
 	top: 0px;
-	left: 48.5%;
+	left: 50%;
 	background-color: #BFB504;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	border-style: solid;
-	border-width: 3px;
 }
 
 #bleft {
@@ -95,8 +92,6 @@ a:visited {
 	background-color: #00007F;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	border-style: solid;
-	border-width: 3px;
 }
 
 #bright {
@@ -105,13 +100,11 @@ a:visited {
 	display: inline-block;
 	width: 44%;
 	height: 5%;
-	left: 48.5%;
+	left: 50%;
 	bottom: 0px;
 	background-color: #BFB504;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	border-style: solid;
-	border-width: 3px;
 }
 
 
