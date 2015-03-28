@@ -18,7 +18,7 @@ body {
 	margin-right: auto;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	background-color: #00007F;
+	background-color: #003D59;
 	border-style: solid;
 	border-width: 3px;
 }
@@ -58,18 +58,20 @@ a:visited {
 }
 
 #tleft {
+	color: #D8D8D8;
 	position: absolute;
 	text-align: center;
 	display: inline-block;
 	width: 44%;
 	height: 5%;
 	top: 0px;
-	background-color: #8C8B03;
+	background-color: #8C8702;
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
 
 #tright {
+	color: #D8D8D8;
 	position: absolute;
 	text-align: center;
 	display: inline-block;
@@ -77,24 +79,26 @@ a:visited {
 	height: 5%;
 	top: 0px;
 	left: 50%;
-	background-color: #7F0000;
+	background-color: #660311;
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
 
 #bleft {
+	color: #D8D8D8;
 	position: absolute;
 	text-align: center;
 	display: inline-block;
 	width: 44%;
 	height: 5%;
 	bottom: 0px;
-	background-color: #8C8B03;
+	background-color: #8C8702;
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
 
 #bright {
+	color: #D8D8D8;
 	position: absolute;
 	text-align: center;
 	display: inline-block;
@@ -102,7 +106,7 @@ a:visited {
 	height: 5%;
 	left: 50%;
 	bottom: 0px;
-	background-color: #7F0000;
+	background-color: #660311;
 	margin-top: 0px;
 	margin-bottom: 0px;
 
@@ -111,7 +115,7 @@ a:visited {
 
 p {
 	display: block;
-	width: 66%;
+	width: 88%;
 	margin-left: auto;
 	margin-right: auto;
 }
