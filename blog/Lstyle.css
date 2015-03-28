@@ -2,7 +2,7 @@ body {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	height: 100%;
-	background-color: white;
+	background-color: #D8D8D8;
 }
 
 * {
@@ -20,7 +20,7 @@ body {
 	margin-bottom: 0px;
 	background-color: #8C8702;
 	border-style: solid;
-	border-width: 3px;
+	border-width: 2px;
 }
 
 a:link {
@@ -40,7 +40,7 @@ a:visited {
 
 .post {
 	display: block;
-	width: 66%;
+	width: 88%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -67,6 +67,8 @@ a:visited {
 	background-color: #660311;
 	margin-top: 0px;
 	margin-bottom: 0px;
+	border-style: solid;
+	border-width: 2px;
 }
 
 #tright {
@@ -80,33 +82,9 @@ a:visited {
 	background-color: #003D59;
 	margin-top: 0px;
 	margin-bottom: 0px;
+	border-style: solid;
+	border-width: 2px;
 }
-
-#bleft {
-	position: absolute;
-	text-align: center;
-	display: inline-block;
-	width: 44%;
-	height: 5%;
-	bottom: 0px;
-	background-color: #660311;
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
-
-#bright {
-	position: absolute;
-	text-align: center;
-	display: inline-block;
-	width: 44%;
-	height: 5%;
-	left: 50%;
-	bottom: 0px;
-	background-color: #003D59;
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
-
 
 p {
 	display: block;
