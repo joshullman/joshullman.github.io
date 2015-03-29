@@ -112,22 +112,21 @@ h4 {
 }
 
 #one {
-font-family: serif;
-
+	font-family: serif;
 }
 
 #two {
-font-size: 30px;
+ 	color: blue;
 }
 
 #three {
-color: blue;
+	font-size: 30px;
 }
 
 #four {
-font-weight: bold;
+	font-weight: bold;
 }
 
 #five {
-font-size: 6px;
+	font-size: 6px;
 }
