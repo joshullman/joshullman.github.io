@@ -110,3 +110,24 @@ h4 {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+#one {
+font-family: serif;
+
+}
+
+#two {
+font-size: 30px;
+}
+
+#three {
+color: blue;
+}
+
+#four {
+font-weight: bold;
+}
+
+#five {
+font-size: 6px;
+}
