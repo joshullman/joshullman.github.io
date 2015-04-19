@@ -34,80 +34,89 @@
             <br><em>class Person
             <br>    end</em>
             <br>
+            <br>
             "Okay, that was by far the most anticlimactic thing I've ever seen".  I'm not done!  Lets start it up so that it takes a couple of arguments upon initilization.  "Initialization?"  Like when you create the class or start it up.  "Oh".
-            
-            <em>class Person
-                  def initialize (name, age, job)
-                    @name = name
-                    @age = age
-                    @job = job
-                  end
-                end</em>
+            <br>
+            <br><em>class Person
+            <br>      def initialize (name, age, job)
+            <br>        @name = name
+            <br>        @age = age
+            <br>        @job = job
+            <br>      end
+            <br>    end</em>
+            <br>
+            <br>
             "What the heck is with all those @ symbols?"  Those symbols mean that those variables are global within the scope of the class.  "?".  It means that other methods can use those variables.  Check it out:
-           
-            <em>class Person
-
-                  def initialize (name, age, job)
-                    @name = name
-                    @age = age
-                    @job = job
-                  end
-
-                  def display
-                    puts "My name is #{@name}, I am #{@age} years old, and I am a #{@job}!"
-                  end
-
-                end</em>
-
+            <br>
+            <br><em>class Person
+            <br>
+            <br>      def initialize (name, age, job)
+            <br>        @name = name
+            <br>        @age = age
+            <br>        @job = job
+            <br>      end
+            <br>
+            <br>      def display
+            <br>        puts "My name is #{@name}, I am #{@age} years old, and I am a #{@job}!"
+            <br>      end
+            <br>
+            <br>    end</em>
+            <br>
+            <br>
             "Oh okay, so without all the @ symbols, display wouldn't be able to get all the initialized variables?" You got it Jimbo.  "So how do I use it?"  Hmmmm.  Let's create a new person like this:
-
-            <em>jimmy = Person.new("Jimmy", 1000000000, "collosal d-bag")</em>
-
+            <br>
+            <br><em>jimmy = Person.new("Jimmy", 1000000000, "collosal d-bag")</em>
+            <br>
+            <br>
             "Whoa, I don't like where this is going -______-" Lol just watch.  If I call the display method on jimmy:
-
-            <em>jimmy.display => My name is Jimmy, I am 1000000000 years old, and I am a collosal d-bag!</em>
-
+            <br>
+            <br><em>jimmy.display => My name is Jimmy, I am 1000000000 years old, and I am a collosal d-bag!</em>
+            <br>
+            <br>
             "Dude, seriously?" Hahaha oh man, that's hilarious. "What the heck.  Do I have to make a whole new jimmy to put in the correct stuff?"  Actually no, there's a way to read and write variables to a class as well!  "Well get on with it!".  There's three ways to do it: attr_reader, attr_writer, and attr_accessor.  reader only lets you read the variables, writer lets you write them but not read them and accessor lets you do both.  Lets add a reader for name, a writer for age, and an accessor for job.
-
-            <em>class Person
-                  attr_reader :name
-                  attr_writer :age
-                  attr_accessor: job
-
-                  def initialize (name, age, job)
-                    @name = name
-                    @age = age
-                    @job = job
-                  end
-
-                  def display
-                    puts "My name is #{@name}, I am #{@age} years old, and I am a #{@job}!"
-                  end
-
-                end</em>
-
-            <em>jimmy.display
-
-            My name is Jimmy, I am 1000000000 years old, and I am a collosal d-bag!</em>
-
-            Haha, still hilarious.  Here's they work:
-
-            <em>jimmy.name => "Jimmy"
-            jimmy.age => no method error
-            jimmy.job => "collosal d-bag"</em>
-
+            <br>
+            <br><em>class Person
+            <br>      attr_reader :name
+            <br>      attr_writer :age
+            <br>      attr_accessor: job
+            <br>
+            <br>      def initialize (name, age, job)
+            <br>        @name = name
+            <br>        @age = age
+            <br>        @job = job
+            <br>      end
+            <br>
+            <br>      def display
+            <br>        puts "My name is #{@name}, I am #{@age} years old, and I am a #{@job}!"
+            <br>      end
+            <br> 
+            <br>    end</em>
+            <br>
+            <br><em>jimmy.display
+            <br>
+            <br>My name is Jimmy, I am 1000000000 years old, and I am a collosal d-bag!</em>
+            <br>
+            <br>
+            Haha, still hilarious.  Here's how they work:
+            <br>
+            <br><em>jimmy.name => "Jimmy"
+            <br>jimmy.age => no method error
+            <br>jimmy.job => "collosal d-bag"</em>
+            <br>
+            <br>
             "Why is .age returning a no method error?" Because attr_writer only lets you read, not write.  "Oh, got it."  So to change them you'd do this:
-
-            <em>jimmy.name = "Josh"
-            jimmy.age = 24
-            jimmy.job = "figment of your imagination"
-
-            jimmy.name = "Jimmy" #it ignores "Josh" as you'd expect
-            jimmy.age => 24
-            jimmy.job => "figment of your imagination"
-
-            jimmy.display => My name is Jimmy, I am 24 years old, and I am a figment of your imagination!</em>
-
+            <br>
+            <br><em>jimmy.name = "Josh"
+            <br>jimmy.age = 24
+            <br>jimmy.job = "figment of your imagination"
+            <br>
+            <br>jimmy.name = "Jimmy" #it ignores "Josh" as you'd expect
+            <br>jimmy.age => 24
+            <br>jimmy.job => "figment of your imagination"
+            <br>
+            <br>jimmy.display => My name is Jimmy, I am 24 years old, and I am a figment of your imagination!</em>
+            <br>
+            <br>
             "That's much better :)" Well I'm glad I could help :P.
           </p>
           <p>
