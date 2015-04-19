@@ -23,10 +23,105 @@
 
     <div class="post">
         <h4>IMG</h4>
+        <h2>Classes and Data Structures</h2>
+        <h4>Week 5: 4/17/15</h4>
+          <p>
+            "Hey Josh, I've got another problem" Why am I not surprised?  "Shut up.  Like, I get making methods and stuff, but sometimes I feel like I'm just making a bunch of unrelated things.  I want to make stuff that works together!"  I think what you're talking about is Classes.  "I've already taken enough classes-" No, you- CLASSES.  A class is an object that lets you store and use data structures like hashes, arrays, and methods all in a centralized location.  "Yes!  That's what I want!"  Well, Jimmy.  I'm going to take you to class.  8).  "You are by far the lamest-"
+          </p>
+          <p>
+            Classes are awesome.  Say we wanted to create a person- "Whoa, okay, let's not start playing god here" Just shut up and watch.  Lets create a Person class.  First off, classes always start with a capital letter:
+            
+            <em>class Person
+                end</em>
+
+            "Okay, that was by far the most anticlimactic thing I've ever seen".  I'm not done!  Lets start it up so that it takes a couple of arguments upon initilization.  "Initialization?"  Like when you create the class or start it up.  "Oh".
+            
+            <em>class Person
+                  def initialize (name, age, job)
+                    @name = name
+                    @age = age
+                    @job = job
+                  end
+                end</em>
+            "What the heck is with all those @ symbols?"  Those symbols mean that those variables are global within the scope of the class.  "?".  It means that other methods can use those variables.  Check it out:
+           
+            <em>class Person
+
+                  def initialize (name, age, job)
+                    @name = name
+                    @age = age
+                    @job = job
+                  end
+
+                  def display
+                    puts "My name is #{@name}, I am #{@age} years old, and I am a #{@job}!"
+                  end
+
+                end</em>
+
+            "Oh okay, so without all the @ symbols, display wouldn't be able to get all the initialized variables?" You got it Jimbo.  "So how do I use it?"  Hmmmm.  Let's create a new person like this:
+
+            <em>jimmy = Person.new("Jimmy", 1000000000, "collosal d-bag")</em>
+
+            "Whoa, I don't like where this is going -______-" Lol just watch.  If I call the display method on jimmy:
+
+            <em>jimmy.display => My name is Jimmy, I am 1000000000 years old, and I am a collosal d-bag!</em>
+
+            "Dude, seriously?" Hahaha oh man, that's hilarious. "What the heck.  Do I have to make a whole new jimmy to put in the correct stuff?"  Actually no, there's a way to read and write variables to a class as well!  "Well get on with it!".  There's three ways to do it: attr_reader, attr_writer, and attr_accessor.  reader only lets you read the variables, writer lets you write them but not read them and accessor lets you do both.  Lets add a reader for name, a writer for age, and an accessor for job.
+
+            <em>class Person
+                  attr_reader :name
+                  attr_writer :age
+                  attr_accessor: job
+
+                  def initialize (name, age, job)
+                    @name = name
+                    @age = age
+                    @job = job
+                  end
+
+                  def display
+                    puts "My name is #{@name}, I am #{@age} years old, and I am a #{@job}!"
+                  end
+
+                end</em>
+
+            <em>jimmy.display
+
+            My name is Jimmy, I am 1000000000 years old, and I am a collosal d-bag!</em>
+
+            Haha, still hilarious.  Here's they work:
+
+            <em>jimmy.name => "Jimmy"
+            jimmy.age => no method error
+            jimmy.job => "collosal d-bag"</em>
+
+            "Why is .age returning a no method error?" Because attr_writer only lets you read, not write.  "Oh, got it."  So to change them you'd do this:
+
+            <em>jimmy.name = "Josh"
+            jimmy.age = 24
+            jimmy.job = "figment of your imagination"
+
+            jimmy.name = "Jimmy" #it ignores "Josh" as you'd expect
+            jimmy.age => 24
+            jimmy.job => "figment of your imagination"
+
+            jimmy.display => My name is Jimmy, I am 24 years old, and I am a figment of your imagination!</em>
+
+            "That's much better :)" Well I'm glad I could help :P.
+          </p>
+          <p>
+           Anyways, there's a ton of different applications for stuff like classes!  Say you want to create an address book.  Instead of keeping track of a bunch of rogue variables and methods, you could create an address class that stores all of that information once!  It's really handy.  "You mom is handy."  Inappropriate, Jimmy.  But yeah, that's about all I've got for today- "JIMMY SIGNING OUT!! WAKAWAKAWAKA!!" -______-.
+          </p>
+      <hr/>
+    </div>
+
+    <div class="post">
+        <h4>IMG</h4>
         <h2>Enumerables and the Wonderful World of #map</h2>
         <h4>Week 4: 4/10/15</h4>
           <p>
-            "I'm the map, I'm the map, I'm the map, I'm the map..."  Jimmy.  "I'M THE MAP, I'M THE MAP, I'M THE MAP, I'M THE MAP-"  JIMMY!  <span id="tiny">"...I'm the map!"</span>. I swear to god, Jimmy.  "What?  I thought we were going to talk about maps?"  Not literal maps!  The Ruby enumerable, #map !  "...You already lost me." Well sit back, shut your food-hole, and get ready to be learned!
+            "I'm the map, I'm the map, I'm the map, I'm the map..."  Jimmy.  "I'M THE MAP, I'M THE MAP, I'M THE MAP, I'M THE MAP-"  JIMMY!  <span id="tiny">"...I'm the map!"</span>. I swear to god, Jimmy.  "What?  I thought we were going to talk about maps?"  Not literal maps!  The Ruby enumerable, #map!  "...You already lost me." Well sit back, shut your food-hole, and get ready to be learned!
           </p>
           <p>
             Have you ever completed an entire array, only to realize you screwed it up?  "Oh, almost every time." Of course you have.  Going through the array, element by element can take foreverrr "Tell me about it :\" so programmers, being the endearingly lazy bastards they are, created something called enumerables.  Enumberables are methods that can be called once, but <span id="four">iterate over each element in your array.</span> "Iterates?" Looks at, goes over, etc.  "Ohhh.  That's cool.  What do they do?"  Well, it depends on what method you call!  There are lots of different types of Enumerables - for instance, #select uses a block of code to select which elements of the array you want, and returns just those elements, and #sort puts all of your elements in order from least to greatest!  Cool huh?  "That is amazing.  So what is #map?"
