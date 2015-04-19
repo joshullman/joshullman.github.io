@@ -38,11 +38,11 @@
             "Okay, that was by far the most anticlimactic thing I've ever seen".  I'm not done!  Lets start it up so that it takes a couple of arguments upon initilization.  "Initialization?"  Like when you create the class or start it up.  "Oh".
             <br>
             <br><em>class Person
-            <br>&nbsp;def initialize (name, age, job)
-            <br>&nbsp;&nbsp;@name = name
-            <br>&nbsp;&nbsp;@age = age
-            <br>&nbsp;&nbsp;@job = job
-            <br>&nbsp;end
+            <br>&nbsp;&nbsp;def initialize (name, age, job)
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;@name = name
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;@age = age
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;@job = job
+            <br>&nbsp;&nbsp;end
             <br>end</em>
             <br>
             <br>
@@ -50,15 +50,15 @@
             <br>
             <br><em>class Person
             <br>
-            <br>&nbsp;def initialize (name, age, job)
-            <br>&nbsp;&nbsp;@name = name
-            <br>&nbsp;&nbsp;@age = age
-            <br>&nbsp;&nbsp;@job = job
-            <br>&nbsp;end
+            <br>&nbsp;&nbsp;def initialize (name, age, job)
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;@name = name
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;@age = age
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;@job = job
+            <br>&nbsp;&nbsp;end
             <br>
-            <br>&nbsp;def display
-            <br>&nbsp;&nbsp;puts "My name is #{@name}, I am #{@age} years old, and I am a #{@job}!"
-            <br>&nbsp;end
+            <br>&nbsp;&nbsp;def display
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;puts "My name is #{@name}, I am #{@age} years old, and I am a #{@job}!"
+            <br>&nbsp;&nbsp;end
             <br>
             <br>    end</em>
             <br>
@@ -76,19 +76,19 @@
             "Dude, seriously?" Hahaha oh man, that's hilarious. "What the heck.  Do I have to make a whole new jimmy to put in the correct stuff?"  Actually no, there's a way to read and write variables to a class as well!  "Well get on with it!".  There's three ways to do it: attr_reader, attr_writer, and attr_accessor.  reader only lets you read the variables, writer lets you write them but not read them and accessor lets you do both.  Lets add a reader for name, a writer for age, and an accessor for job.
             <br>
             <br><em>class Person
-            <br>&nbsp;attr_reader :name
-            <br>&nbsp;attr_writer :age
-            <br>&nbsp;attr_accessor: job
+            <br>&nbsp;&nbsp;attr_reader :name
+            <br>&nbsp;&nbsp;attr_writer :age
+            <br>&nbsp;&nbsp;attr_accessor: job
             <br>
-            <br>&nbsp;def initialize (name, age, job)
-            <br>&nbsp;&nbsp;@name = name
-            <br>&nbsp;&nbsp;@age = age
-            <br>&nbsp;&nbsp;@job = job
-            <br>&nbsp;end
+            <br>&nbsp;&nbsp;def initialize (name, age, job)
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;@name = name
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;@age = age
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;@job = job
+            <br>&nbsp;&nbsp;end
             <br>
-            <br>&nbsp;def display
-            <br>&nbsp;&nbsp;puts "My name is #{@name}, I am #{@age} years old, and I am a #{@job}!"
-            <br>&nbsp;end
+            <br>&nbsp;&nbsp;def display
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;puts "My name is #{@name}, I am #{@age} years old, and I am a #{@job}!"
+            <br>&nbsp;&nbsp;end
             <br> 
             <br>    end</em>
             <br>
