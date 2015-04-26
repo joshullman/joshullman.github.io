@@ -23,6 +23,65 @@
 
     <div class="post">
         <h4>IMG</h4>
+        <h2>Blocks, Procs, and Lambdas</h2>
+        <h4>Week 6: 4/24/15</h4>
+          <p>"Hey Josh, I've got-" Hello everyone and welcome to 'Jimmy Has A Problem' - I'm your host, Josh Ullman.  "You know, sarcasm doesn't make you any friends..." Jimmy, it's great to have you back, what seems to be the problem this week?  "I'm just gonna ignore that.  I've got a bunch of arrays and I want to change all of them but it's taking foreverrr".  Are you using iterators?  "?"  Like #map and #each and stuff?  "Oh, yeah, but it's kind of looking ugly :\":
+          <br>
+          <br>arr1.map! {|i| i ** 2}
+          <br>arr2.map! {|i| i ** 2}
+          <br>arr3.map! {|i| i ** 2}
+          <br>arr4.map! {|i| i ** 2}
+          <br>arr5.map! {|i| i ** 2}
+          <br>arr6.map! {|i| i ** 2}</em>
+          <br>
+          <br>
+          </p>
+          <p>Ok, yeah, that is ugly.  So you're using blocks fine- "Blocks?" the stuff in the {}'s- "Oh" but have you ever heard of a Procs or Lambdas?  "No, what're those?" They're cool ways of saving and reusing a block multiple times.  That way, instead of writing {|i| i ** 2} a bunch of times, you can just write it once.  Check it out:
+          <br>
+          <br>square = Proc.new {|i| i ** 2}
+          <br>arr1.map!(&amp;square)
+          <br>arr2.map!(&amp;square)
+          <br>arr3.map!(&amp;square)
+          <br>arr4.map!(&amp;square)
+          <br>arr5.map!(&amp;square)
+          <br>arr6.map!(&amp;square)</em>
+          <br>
+          <br>
+          You have to use the ampersand to specify that it's a block.  It doesn't fix your inherent DRY problem but at least it's a bit more readable.  You can also use #call to activate a Proc.  If it was something like, say, <em>greeting = Proc.new {puts "Hello!"}</em> you could use <em>greeting.call</em> and it will print out <em>Hello!</em>.  "Huh that's cool...so what's a Lambda?" A Lambda is basically the same thing, but it checks how many arguments are passed to it (it'll give an argument error) and it doesn't override the final return.  "Oh, how does that work?".  Let me show you:
+          <br>
+          <br><em>def last_word_proc
+          <br>&nbsp;&nbsp;puts "This argument is over!"
+          <br>&nbsp;&nbsp;last_word = Proc.new {return "I'm getting the last word!"}
+          <br>&nbsp;&nbsp;last_word.call
+          <br>&nbsp;&nbsp;"No you're not!!"
+          <br>end
+          <br>
+          <br>def last_word_lambda
+          <br>&nbsp;&nbsp;puts "This argument is over!"
+          <br>&nbsp;&nbsp;last_word = lambda {return "I'm getting the last word!"}
+          <br>&nbsp;&nbsp;last_word.call
+          <br>&nbsp;&nbsp;"Ha!  I told you!"
+          <br>end
+          <br>
+          <br>puts last_word_proc =>
+          <br>"This argument is over!"
+          <br>"I'm getting the last word!"
+          <br>
+          <br>puts last_word_lambda =>
+          <br>"This argument is over!"
+          <br>"Ha!  I told you!"
+          <br>
+          <br>
+          See, when I call the last_word Proc in the first example, it immediately spits out "I'm getting the last word!" and exits the method.  The last_word lambda on the other hand brings you back into the method and returns the last line there.  "Huh...interesting."  Yeah.  Procs act a bit more like blocks and lambda act a bit more like methods.  If you want something and a bit more interpretive, go with a lambda, but if it doesn't need to be smart go with a Proc!
+          </p>
+          <p>
+          Anyways, that's about all I've got for today.  "About time..." Shut up.  "No life tips this time?  No bashing on my inferiority complex?" No, I don't have enough time, I've got better things to do.  "Pshhht whatever" Yeah, yeah.  I'll see you next week.  Hopefully with better advice.  This is Josh Ullman and 'Jimmy Has a Problem' signing off.
+          </p>
+      <hr/>
+    </div>
+
+    <div class="post">
+        <h4>IMG</h4>
         <h2>Classes and Data Structures</h2>
         <h4>Week 5: 4/17/15</h4>
           <p>
