@@ -23,6 +23,47 @@
 
     <div class="post">
         <h4>IMG</h4>
+        <h2>Recursion</h2>
+        <h4>Week 8: 5/8/15</h4>
+          <p>"Recursion?  What the hell is that?"  Have you ever looked into a mirror that's pointing at another mirror?  Or, probably more accurately, have you ever hooked up a video camera to your tv and then pointed the camera at the tv?  "Yeah...it's like you filming yourself, filming yourself, filming yourself...forever I guess."  Exactly.  Recursion is a lot like that but for coding.  It's a way of using the same function over and over and over again until you get the result you're looking for.  "But how do you avoid the spiral of doom?"  The...what?  "When you film yourself over and over or look in two mirrors you always get the spiral of doom...it never ends, it just kind of goes into infinity."  That's true.  And that'll happen and totally screw everything up if you don't do recursion correctly.  "Well then why would I ever use recursion??"  Because, dude, it's so freakin sexy.
+          </p>
+          <p>Recursion calls upon the function itself in an infinite loop.  "Aren't infinite loops bad?"  They're terrible.  "So if infinite loops are terrible, but you're still a fan of recursion...then I assume there's a way to prevent it from looping forever?  Or else it'd be worthless, right?"  Jimmy, that's the smartest thing you may have ever said.  There exactly such a thing, and it's called a Base Case.  Check out the following code:
+          <br>
+          <br><em>def recursify(num)
+          <br>&nbsp;&nbsp;puts num
+          <br>&nbsp;&nbsp;return recursify(num-1)
+          <br>end</em>
+          <br>
+          <br>
+          </p>
+          <p>You see how the return statement returns the function call, but slightly altered?  That's recursion.  "Yeah but that'll go on forever, right?"  Yep!  "You're an idiot."  Yep!  Actually I just wanted to show you what recursion itself is.  Now, let's add a Base Case.
+          <br>
+          <br><em>def recursify(num)
+          <br>&nbsp;&nbsp;puts num
+          <br>&nbsp;&nbsp;return recursify(num-1) if num > 0
+          <br>end</em>
+          <br>
+          <br>
+          </p>
+          <p>This way, the function knows when to stop.  So if I called the function:
+          <br>
+          <br><em>recursify(5)
+          <br>
+          <br>=> 5
+          <br>=> 4
+          <br>=> 3
+          <br>=> 2
+          <br>=> 1
+          <br>=> 0<em>
+          <br>
+          <br>
+          Voila.  Isn't it beautiful?  "Why not just use a while loop to count down to zero?" Because it's not as elegant.  "But it doesn't make any sense.  If recursion is slower, why use it?"  ...You're the reason why we can't have nice things, Jimmy.  Just sit back and appreciate the coolness.
+          </p>
+      <hr/>
+    </div>
+
+    <div class="post">
+        <h4>IMG</h4>
         <h2>Ruby vs Javascript</h2>
         <h4>Week 7: 5/1/15</h4>
           <p>And now, for the main event!  Ruby vs Javascript!!  Ahhhh, ahhhh, ahhhh!  The crowd goes mild!  "Josh, what in the hell are you talking about?"  Isn't this the ultimate showdown??  What everyone's been waiting for?!  What we've been preparing for all this time?!?! "Dude, you've gotta calm down.  Nerd...".  Jimmy, you have no idea what you're talking about you monumental hobnob.  "Yeah well at least I'm not some milk-drinker!!"  YOU TAKE THAT BACK!!
